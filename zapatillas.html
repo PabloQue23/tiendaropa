@@ -3,15 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda de Ropa - High End Collection</title>
+    <title>Tienda de Zapatillas - High End Sneakers</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <style>
+        .product-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+
 <header class="main-header">
     <div class="header-container">
-        <div class="logo">CLOTHING<span>STUDIO</span></div>
+        <div class="logo">SNEAKER<span>STUDIO</span></div>
         <nav class="nav-menu">
             <a href="#">HOMBRE</a>
             <a href="#">MUJER</a>
@@ -41,63 +49,96 @@
         <div class="filter-group">
             <h3>Colores</h3>
             <div class="color-options">
-                <span class="dot azul" title="Azul Petróleo"></span>
-                <span class="dot rosa-claro" title="Rosa Pastel"></span>
-                <span class="dot rosa-fuerte" title="Rosa Viejo"></span>
-                <span class="dot gris" title="Gris Verdoso"></span>
+                <span class="dot blanco" title="Blanco"></span>
+                <span class="dot negro" title="Negro"></span>
+                <span class="dot beige" title="Beige"></span>
+                <span class="dot gris" title="Gris"></span>
             </div>
         </div>
 
         <div class="filter-group">
             <h3>Talla</h3>
             <ul class="talla-list">
-                <li>S</li>
-                <li>M</li>
-                <li>L</li>
-                <li>XL</li>
+                <li>38</li>
+                <li>39</li>
+                <li>40</li>
+                <li>41</li>
+                <li>42</li>
+                <li>43</li>
             </ul>
         </div>
     </aside>
 
     <main class="main">
         <div class="topbar">
-            <h1>Sudaderas para hombre</h1>
+            <h1>Zapatillas destacadas</h1>
             <div class="sort">5 RESULTADOS</div>
         </div>
 
         <div class="products">
+
             <div class="card-producto">
                 <div class="product-image">
+                    <img src="img/zapatilla1.png" alt="Zapatillas casual beige">
                     <span class="badge-nuevo">Nuevo</span>
                     <div class="quick-add">Vista Rápida</div>
                 </div>
                 <div class="product-info">
-                    <h4>Sudadera Algodón Premium</h4>
-                    <p class="descripcion">Corte clásico con acabado suave al tacto.</p>
+                    <h4>Zapatilla Casual Beige</h4>
+                    <p class="descripcion">Diseño minimalista con acabados premium.</p>
                     <span class="precio">89,00 €</span>
                     <button class="btn-comprar">Añadir al carrito</button>
                 </div>
             </div>
 
             <div class="card-producto">
-                <div class="product-image"></div>
+                <div class="product-image">
+                    <img src="img/zapatilla2.png" alt="Zapatillas deportivas blanco y negro">
+                </div>
                 <div class="product-info">
-                    <h4>Sudadera con Capucha</h4>
-                    <p class="descripcion">Ideal para un look deportivo y moderno.</p>
+                    <h4>Zapatilla Deportiva Urban</h4>
+                    <p class="descripcion">Estilo moderno con máxima comodidad.</p>
+                    <span class="precio">129,00 €</span>
+                    <button class="btn-comprar">Añadir al carrito</button>
+                </div>
+            </div>
+
+            <div class="card-producto">
+                <div class="product-image">
+                    <img src="img/zapatilla3.png" alt="Zapatillas negras clásicas">
+                </div>
+                <div class="product-info">
+                    <h4>Zapatilla Clásica Negra</h4>
+                    <p class="descripcion">Un básico versátil para cualquier look.</p>
                     <span class="precio">95,00 €</span>
                     <button class="btn-comprar">Añadir al carrito</button>
                 </div>
             </div>
 
             <div class="card-producto">
-                <div class="product-image"></div>
+                <div class="product-image">
+                    <img src="img/zapatilla4.png" alt="Zapatillas high-top blanco y dorado">
+                </div>
                 <div class="product-info">
-                    <h4>Sudadera Cuello Redondo</h4>
-                    <p class="descripcion">Tejido ligero para media estación.</p>
-                    <span class="precio">75,00 €</span>
+                    <h4>Zapatilla High-Top Gold</h4>
+                    <p class="descripcion">Detalles metálicos y estética elegante.</p>
+                    <span class="precio">149,00 €</span>
                     <button class="btn-comprar">Añadir al carrito</button>
                 </div>
             </div>
+
+            <div class="card-producto">
+                <div class="product-image">
+                    <img src="img/zapatilla5.png" alt="Zapatillas chunky blancas">
+                </div>
+                <div class="product-info">
+                    <h4>Zapatilla Chunky Luxe</h4>
+                    <p class="descripcion">Tendencia actual con suela oversize.</p>
+                    <span class="precio">139,00 €</span>
+                    <button class="btn-comprar">Añadir al carrito</button>
+                </div>
+            </div>
+
         </div>
     </main>
 </div>
