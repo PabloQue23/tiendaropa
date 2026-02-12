@@ -6,6 +6,16 @@
     <title>Tienda de Ropa - High End Collection</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Ajuste visual para las fotos */
+        .product-image {
+            background-color: #f4f4f4;
+            background-position: center;
+            background-size: cover;
+            min-height: 350px;
+            position: relative;
+        }
+    </style>
 </head>
 <body>
 
@@ -41,60 +51,89 @@
         <div class="filter-group">
             <h3>Colores</h3>
             <div class="color-options">
-                <span class="dot azul" title="Azul Petróleo"></span>
-                <span class="dot rosa-claro" title="Rosa Pastel"></span>
-                <span class="dot rosa-fuerte" title="Rosa Viejo"></span>
-                <span class="dot gris" title="Gris Verdoso"></span>
+                <span class="dot" style="background-color: #2c3e50;" title="Azul Marino"></span>
+                <span class="dot" style="background-color: #d2b48c;" title="Beige Arena"></span>
+                <span class="dot" style="background-color: #4b5320;" title="Verde Oliva"></span>
+                <span class="dot" style="background-color: #1a1a1a;" title="Negro"></span>
             </div>
         </div>
 
         <div class="filter-group">
             <h3>Talla</h3>
             <ul class="talla-list">
-                <li>S</li>
-                <li>M</li>
-                <li>L</li>
-                <li>XL</li>
+                <li>38</li>
+                <li>40</li>
+                <li>42</li>
+                <li>44</li>
+                <li>46</li>
             </ul>
         </div>
     </aside>
 
     <main class="main">
         <div class="topbar">
-            <h1>Camisetas para hombre</h1>
+            <h1>Pantalones para hombre</h1>
             <div class="sort">5 RESULTADOS</div>
         </div>
 
         <div class="products">
             <div class="card-producto">
-                <div class="product-image">
+                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1624371414361-e6e0efc583a8?q=80&w=600&auto=format&fit=crop');">
                     <span class="badge-nuevo">Nuevo</span>
                     <div class="quick-add">Vista Rápida</div>
                 </div>
                 <div class="product-info">
-                    <h4>Camiseta rosa</h4>
-                    <p class="descripcion">Corte clásico con acabado suave al tacto.</p>
-                    <span class="precio">89,00 €</span>
+                    <h4>Pantalón Chino Slim</h4>
+                    <p class="descripcion">Corte entallado en algodón premium.</p>
+                    <span class="precio">119,00 €</span>
                     <button class="btn-comprar">Añadir al carrito</button>
                 </div>
             </div>
 
             <div class="card-producto">
-                <div class="product-image"></div>
+                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1542272604-787c3835535d?q=80&w=600&auto=format&fit=crop');">
+                    <div class="quick-add">Vista Rápida</div>
+                </div>
                 <div class="product-info">
-                    <h4>Sudadera con Capucha</h4>
-                    <p class="descripcion">Ideal para un look deportivo y moderno.</p>
+                    <h4>Vaquero Selvedge</h4>
+                    <p class="descripcion">Denim artesanal acabado a mano.</p>
+                    <span class="precio">145,00 €</span>
+                    <button class="btn-comprar">Añadir al carrito</button>
+                </div>
+            </div>
+
+            <div class="card-producto">
+                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=600&auto=format&fit=crop');">
+                    <div class="quick-add">Vista Rápida</div>
+                </div>
+                <div class="product-info">
+                    <h4>Pantalón de Lino</h4>
+                    <p class="descripcion">Tejido ligero para climas cálidos.</p>
                     <span class="precio">95,00 €</span>
                     <button class="btn-comprar">Añadir al carrito</button>
                 </div>
             </div>
 
             <div class="card-producto">
-                <div class="product-image"></div>
+                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1473966968600-fa801b869a1a?q=80&w=600&auto=format&fit=crop');">
+                    <div class="quick-add">Vista Rápida</div>
+                </div>
                 <div class="product-info">
-                    <h4>Sudadera Cuello Redondo</h4>
-                    <p class="descripcion">Tejido ligero para media estación.</p>
-                    <span class="precio">75,00 €</span>
+                    <h4>Pantalón Cargo Modern</h4>
+                    <p class="descripcion">Diseño utilitario con bolsillos laterales.</p>
+                    <span class="precio">125,00 €</span>
+                    <button class="btn-comprar">Añadir al carrito</button>
+                </div>
+            </div>
+
+            <div class="card-producto">
+                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1506629082955-511b1aa562c8?q=80&w=600&auto=format&fit=crop');">
+                    <div class="quick-add">Vista Rápida</div>
+                </div>
+                <div class="product-info">
+                    <h4>Pantalón de Vestir Sastre</h4>
+                    <p class="descripcion">Lana virgen para un acabado impecable.</p>
+                    <span class="precio">159,00 €</span>
                     <button class="btn-comprar">Añadir al carrito</button>
                 </div>
             </div>
@@ -104,7 +143,7 @@
 
 <div class="promo-popup">
     <div class="promo-content">
-        <strong>Rebajas hasta 50% de descuento</strong>
+        <strong>Rebajas hasta 50% en Pantalones</strong>
         <button>COMPRA AHORA</button>
     </div>
 </div>
