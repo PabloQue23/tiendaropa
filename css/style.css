@@ -264,3 +264,141 @@ body {
   cursor: pointer;
   border-radius: 2px;
 }
+/* --- HERO PRINCIPAL --- */
+.hero-principal {
+  background-color: var(--color-neutro);
+  padding: 80px 20px;
+  position: relative;  /* Necesario para ubicar la imagen absoluta */
+  overflow: visible;
+}
+.hero-content {
+  display: flex;
+  align-items: center; /* Centra verticalmente el texto con la imagen */
+  justify-content: space-between; /* Deja espacio entre texto e imagen */
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1; /* Ocupa todo el espacio disponible a la izquierda */
+}
+
+.hero-text h1 {
+  text-align: left; /* H1 alineado a la izquierda */
+  font-size: 2.8rem;
+  color: var(--color-secundario);
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: var(--negro-suave);
+  margin-bottom: 20px;
+}
+
+
+.hero-principal h1 {
+    text-align: center;
+  font-size: 2.8rem;
+  color: var(--color-secundario);
+  margin-bottom: 20px;
+  font-weight: 700px;
+  margin-left: -80px; /* quita cualquier margen extra */
+  padding-left: 20px; /* opcional, un pequeño espacio desde el borde */
+}
+
+.hero-principal p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: var(--negro-suave);
+}
+
+.hero-principal p.rebajas {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 1.9rem;
+}
+
+
+.btn-principal {
+  background-color: var(--color-primario-fuerte);
+  color: white;
+  padding: 15px 35px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+  display: inline-block;
+}
+
+.btn-principal:hover {
+  background-color: var(--color-secundario);
+}
+
+/* --- CATEGORÍAS PRINCIPALES --- */
+.categorias-principales {
+  max-width: 1400px;
+  margin: 80px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.categoria-card {
+  background-color: var(--color-primario-claro);
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 15px;
+  transition: 0.3s ease;
+}
+
+.categoria-card h2 {
+  color: var(--color-secundario);
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+.categoria-card:hover {
+  background-color: var(--color-primario-fuerte);
+}
+
+.categoria-card:hover h2 {
+  color: white;
+}
+
+.btn-secundario {
+  background-color: var(--color-secundario);
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: 0.3s ease;
+}
+
+.btn-secundario:hover {
+  background-color: var(--negro-suave);
+}
+
+.hero-text {
+  flex: 1;
+  z-index: 2;
+}
+
+.imagenMenuPrincipal {
+  flex: 1;
+  max-width: 280px;
+  width: 100%;
+  position: relative;
+  top: -20px; /* Ajusta cuánto quieres que suba la imagen */
+  z-index: 1;
+}
+
+.imagenMenuPrincipal {
+  flex: 1;
+  max-width: 280px;
+  width: 100%;
+}
