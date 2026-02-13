@@ -14,7 +14,6 @@
             min-height: 350px;
             position: relative;
         }
-        /* Estilo rápido para el contador cuando tiene productos */
         .cart-active {
             font-weight: bold;
             color: #27ae60;
@@ -66,31 +65,53 @@
 
         <div class="products">
             <div class="card-producto">
-                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1624371414361-e6e0efc583a8?q=80&w=600&auto=format&fit=crop');">
-                    <span class="badge-nuevo">Nuevo</span>
+                <div class="product-image" style="background-image: url('img/pantalones1.jpg');">
+                    <span class="badge-nuevo">Confort</span>
                 </div>
                 <div class="product-info">
-                    <h4>Pantalón Chino Slim</h4>
-                    <p class="descripcion">Algodón premium.</p>
-                    <span class="precio">119.00 €</span>
+                    <h4>Pantalón Relaxed Fit</h4>
+                    <p class="descripcion">Cintura elástica con cordón ajustable.</p>
+                    <span class="precio">85.00 €</span>
                     <button class="btn-comprar">Añadir al carrito</button>
                 </div>
             </div>
+
             <div class="card-producto">
-                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1542272604-787c3835535d?q=80&w=600&auto=format&fit=crop');"></div>
+                <div class="product-image" style="background-image: url('img/pantalones2.jpg');"></div>
                 <div class="product-info">
-                    <h4>Vaquero Selvedge</h4>
-                    <p class="descripcion">Denim artesanal.</p>
-                    <span class="precio">145.00 €</span>
+                    <h4>Pantalón Acampanado Black</h4>
+                    <p class="descripcion">Corte retro con acabado formal.</p>
+                    <span class="precio">129.00 €</span>
                     <button class="btn-comprar">Añadir al carrito</button>
                 </div>
             </div>
+
             <div class="card-producto">
-                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=600&auto=format&fit=crop');"></div>
+                <div class="product-image" style="background-image: url('img/pantalones3.jpg');"></div>
                 <div class="product-info">
-                    <h4>Pantalón de Lino</h4>
-                    <p class="descripcion">Tejido ligero.</p>
+                    <h4>Chino Slim Camel</h4>
+                    <p class="descripcion">Detalles en contraste y corte entallado.</p>
                     <span class="precio">95.00 €</span>
+                    <button class="btn-comprar">Añadir al carrito</button>
+                </div>
+            </div>
+
+            <div class="card-producto">
+                <div class="product-image" style="background-image: url('img/pantalones4.jpg');"></div>
+                <div class="product-info">
+                    <h4>Pantalón Casual Gris</h4>
+                    <p class="descripcion">Tejido suave de algodón técnico.</p>
+                    <span class="precio">89.00 €</span>
+                    <button class="btn-comprar">Añadir al carrito</button>
+                </div>
+            </div>
+
+            <div class="card-producto">
+                <div class="product-image" style="background-image: url('img/pantalones5.jpg');"></div>
+                <div class="product-info">
+                    <h4>Chino Clásico Beige</h4>
+                    <p class="descripcion">Un básico esencial para el día a día.</p>
+                    <span class="precio">79.00 €</span>
                     <button class="btn-comprar">Añadir al carrito</button>
                 </div>
             </div>
@@ -103,11 +124,9 @@
         <h2 style="margin: 0; font-size: 1.2rem; letter-spacing: 2px;">MI CARRITO</h2>
         <button id="close-cart" style="background: none; border: none; font-size: 30px; cursor: pointer;">&times;</button>
     </div>
-    
     <div id="cart-items-list" style="flex-grow: 1; overflow-y: auto; padding: 20px 0;">
         <p id="cart-empty-msg" style="text-align: center; color: #999; margin-top: 50px;">El carrito está vacío</p>
     </div>
-
     <div style="border-top: 1px solid #eee; padding-top: 20px;">
         <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 1.1rem; margin-bottom: 20px;">
             <span>TOTAL</span>
@@ -132,7 +151,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     let carrito = [];
 
-    // Función para abrir/cerrar
     const toggleCart = () => {
         const isOpen = cartDrawer.style.right === '0px';
         cartDrawer.style.right = isOpen ? '-400px' : '0px';
@@ -143,7 +161,6 @@ document.addEventListener('DOMContentLoaded', () => {
     closeCart.addEventListener('click', toggleCart);
     cartOverlay.addEventListener('click', toggleCart);
 
-    // Lógica de añadir
     const botones = document.querySelectorAll('.btn-comprar');
     botones.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -154,7 +171,6 @@ document.addEventListener('DOMContentLoaded', () => {
             carrito.push({ nombre, precio });
             renderCarrito();
             
-            // Animación simple del botón
             btn.innerText = "✓ AÑADIDO";
             btn.style.backgroundColor = "#27ae60";
             setTimeout(() => {
@@ -165,15 +181,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function renderCarrito() {
-        // Actualizar contador header
         cartTrigger.innerText = `Carrito (${carrito.length})`;
         if(carrito.length > 0) cartTrigger.classList.add('cart-active');
 
-        // Limpiar lista
         itemsList.innerHTML = '';
         if (carrito.length === 0) {
             itemsList.appendChild(emptyMsg);
             totalDisplay.innerText = "0.00 €";
+            cartTrigger.classList.remove('cart-active');
         } else {
             let subtotal = 0;
             carrito.forEach((item, index) => {
@@ -192,7 +207,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     checkoutBtn.addEventListener('click', () => {
         if(carrito.length > 0) {
-            // ALERTA PERSONALIZADA FINAL
             const confirmacion = document.createElement('div');
             confirmacion.style = "position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:white; padding:40px; z-index:20000; text-align:center; box-shadow:0 0 50px rgba(0,0,0,0.5); width:300px;";
             confirmacion.innerHTML = `
